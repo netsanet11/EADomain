@@ -20,9 +20,9 @@ public class Address {
  	private String state;
   	private String zipCode;
 
-//  	@ManyToOne(fetch=FetchType.EAGER)
-//    @JoinColumn (name="user_id") 
-//  	private User  user;
+  	@ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn (name="user_id") 
+  	private User  user;
   	
 	public String getStreet() {
 		return street;
@@ -48,12 +48,12 @@ public class Address {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-//	public User getMember() {
-//		return user;
-//	}
-//	public void setMember(User member) {
-//		this.user = member;
-//	}
-//	
+	public User getMember() {
+		return user;
+	}
+	public void setMember(User member) {
+		this.user = member;
+	}
+	
 	
 }

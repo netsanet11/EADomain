@@ -30,10 +30,10 @@ public class Product implements Serializable {
 	/*    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	     private Category category;
 	*/  
-	    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	    @JoinTable ( name="Category_Product", joinColumns={@JoinColumn(name="Product_ID")},  
-	    inverseJoinColumns={ @JoinColumn(name="Category_ID")} )  
-	    private List<Category> categories = new ArrayList<Category>();
+//	    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	    @JoinTable ( name="Category_Product", joinColumns={@JoinColumn(name="Product_ID")},  
+//	    inverseJoinColumns={ @JoinColumn(name="Category_ID")} )  
+//	    private List<Category> categories = new ArrayList<Category>();
 
 	     public long getId() {
 			return id;
@@ -72,15 +72,15 @@ public class Product implements Serializable {
 			this.category = category;
 		}*/
 
-		public List<Category> getCategories() {
-			return categories;
-		}
-		public void setCategories(List<Category> categories) {
-			this.categories = categories;
-		}
-		public void addCategory(Category category) {
-			this.categories.add(category);
-//			category.getProducts().add(this);
-		}
+//		public List<Category> getCategories() {
+//			return categories;
+//		}
+//		public void setCategories(List<Category> categories) {
+//			this.categories = categories;
+//		}
+//		public void addCategory(Category category) {
+//			this.categories.add(category);
+////			category.getProducts().add(this);
+//		}
 
 }

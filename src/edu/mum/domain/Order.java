@@ -20,11 +20,6 @@ import javax.persistence.Version;
 
 @Entity
 @Table(name = "purchaseOrder")
-@NamedEntityGraph(name = "graph.Order.items", 
-               attributeNodes = { @NamedAttributeNode(value = "items", subgraph = "items"),
-            		   @NamedAttributeNode(value = "payments")} ,
-               subgraphs = @NamedSubgraph(name = "items", 
-               				attributeNodes = @NamedAttributeNode("product")))
 public class Order implements Serializable {
 	  @Id
 	   @GeneratedValue(strategy = GenerationType.AUTO)
